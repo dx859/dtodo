@@ -35,7 +35,7 @@ function deleteTask(id) {
 function updateTask(opts = {}) {
   const id = opts.id;
   let tasks = getTask();
-  let task = tasks.filter((task) => task.id !== id)[0];
+  let task = tasks.filter((task) => task.id === id)[0];
   if (!task) {
     throw new Error(`没找到id为${id}得项目`);
   }
